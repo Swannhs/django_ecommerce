@@ -20,11 +20,11 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    id = models.AutoField(primary_key=True, editabel=False)
+    id = models.AutoField(primary_key=True, editable=False)
     # customer name
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
-    quantity = models.ImageField(null=True, blank=True, default=0)
+    quantity = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return str(self.product)
