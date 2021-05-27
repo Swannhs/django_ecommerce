@@ -12,7 +12,7 @@ class Product(models.Model):
     shortDescription = models.TextField(null=True, blank=True)
     fullDescription = models.TextField(null=True, blank=True)
     category = models.CharField(max_length=200, null=True, blank=True)
-    rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True, default=0)
     numReviews = models.IntegerField(null=True, blank=True, default=0)
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     createdAt = models.DateTimeField(auto_now_add=True)
